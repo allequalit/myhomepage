@@ -1,0 +1,27 @@
+source /etc/network/interfaces.d/*
+
+auto eth1
+ iface eth1 inet static
+  mtu 9000
+
+auto vmbr1
+#private sub network
+iface vmbr1 inet static
+        address  192.168.1.1
+        netmask  255.255.255.0
+        bridge_ports none
+        bridge_stp off
+        bridge_fd 0
+        bridge-vlan-aware yes
+        mtu 9000
+
+auto vmbr2
+iface vmbr2 inet static
+  address 172.107.154.26
+  netmask 255.255.255.248
+  gateway 172.107.154.25
+  bridge_ports eth1
+  bridge_stp off
+  bridge_fd 0
+  bridge-vlan-aware yes
+  mtu 9000
