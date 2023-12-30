@@ -4,17 +4,7 @@
         alert("익스플로러 브라우저를 지원하지않습니다. 크롬 브라우저를 설치해주세요.");
 		window.location.href="https://www.google.com/intl/ko/chrome/";
     } 
-	var pc_arr = location.href.split("="); 
-if(pc_arr[1] != "1") 
-{ 
-    var mobileKeyWords = new Array('iPhone', 'iPod', 'BlackBerry', 'Android', 'Windows CE', 'LG', 'MOT', 'SAMSUNG', 'SonyEricsson'); 
-    for (var word in mobileKeyWords){ 
-        if (navigator.userAgent.match(mobileKeyWords[word]) != null){ 
-            location.href = "https://alave.io/mobile-virtual"; 
-            break; 
-        } 
-    } 
-} 
+	
 </script>
 <head>
 
