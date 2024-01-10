@@ -1,1 +1,1 @@
-java -Xms16G -Xmx16G -XX:+UseTransparentHugePages -XX:+AlwaysPreTouch -jar
+java -Xms16G -Xmx16G -XX:+IgnoreUnrecognizedVMOptions -XX:+UseTransparentHugePages -XX:+AlwaysPreTouch -jar
