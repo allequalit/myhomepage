@@ -42,7 +42,7 @@ function k2server() {
     ChannelIO('openSupportBot', '95305'); 
 }
 function k3server() {
-    ChannelIO('openSupportBot', '95310'); 
+    ChannelIO('openSupportBot', '95306'); 
 }
 function k4server() {
     ChannelIO('openSupportBot', '95308'); 
