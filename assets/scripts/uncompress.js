@@ -7,13 +7,13 @@ function redirectToExpressVPN() {
 }
 
 function t1server() {
-    ChannelIO('openSupportBot', '36964'); 
+    ChannelIO('openSupportBot', '95179'); 
 }
 function t2server() {
-    ChannelIO('openSupportBot', '36964'); 
+    ChannelIO('openSupportBot', '95181'); 
 }
 function t3server() {
-    ChannelIO('openSupportBot', '36964'); 
+    ChannelIO('openSupportBot', '95182'); 
 }
 function t4server() {
     ChannelIO('openSupportBot', '95183'); 
@@ -31,6 +31,9 @@ function tm3server() {
 function tm4server() {
     ChannelIO('openSupportBot', '95187'); 
 }
+function tcustomserver() {
+    ChannelIO('openSupportBot', '39306'); 
+}
 
 function k1server() {
     ChannelIO('openSupportBot', '95304'); 
@@ -39,7 +42,7 @@ function k2server() {
     ChannelIO('openSupportBot', '95305'); 
 }
 function k3server() {
-    ChannelIO('openSupportBot', '36964'); 
+    ChannelIO('openSupportBot', '95310'); 
 }
 function k4server() {
     ChannelIO('openSupportBot', '95308'); 
@@ -49,11 +52,15 @@ function km1server() {
     ChannelIO('openSupportBot', '95309'); 
 }
 function km2server() {
-    ChannelIO('openSupportBot', '36964'); 
+    ChannelIO('openSupportBot', '95310'); 
 }
 function km3server() {
     ChannelIO('openSupportBot', '95311'); 
 }
 function km4server() {
-    ChannelIO('openSupportBot', '36964'); 
+    ChannelIO('openSupportBot', '95178'); 
+}
+
+function kcustomserver() {
+    ChannelIO('openSupportBot', '95180'); 
 }
