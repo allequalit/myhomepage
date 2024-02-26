@@ -26,7 +26,7 @@ function tm2server() {
     ChannelIO('openSupportBot', '95185'); 
 }
 function tm3server() {
-    ChannelIO('openSupportBot', '36964'); 
+    ChannelIO('openSupportBot', '95186'); 
 }
 function tm4server() {
     ChannelIO('openSupportBot', '95187'); 
