@@ -189,7 +189,7 @@ if(pc_arr[1] != "1")
 		<section class="section-secondary">
 
 			<header style="margin-bottom:50px" class="section-header">
-				<p>이 상품은 정해진 계약 기간 없이 무약정으로 제공되며, 1개월 단위로 연장하여 사용하실 수 있습니다 <br>디도스방어와 부과가치세(VAT)가 포함된 가격이며, 현금영수증이나 세금계산서 발급이 가능합니다</p>
+				<p>이 상품은 정해진 계약 기간 없이 무약정으로 제공되며, 1개월 단위로 연장하여 사용할 수 있습니다 <br>디도스방어와 부과가치세(VAT)가 포함된 가격이며, 현금영수증이나 세금계산서 발급이 가능합니다</p>
 			</header>
 
 
@@ -263,7 +263,7 @@ if(pc_arr[1] != "1")
 									<li class="serv" >대역폭 : <strong>500Mbps </strong></li>
 									<li class="serv" >트래픽 : <strong>무제한 </strong></li>
 								</ul>
-								<button style="margin-top:23px" class="buy" onclick="window.location.href = '#t2server';">T2서버 구매</button>
+								<button style="margin-top:23px" class="buy" onclick="t2server(); return false;">T2서버 구매</button>
 							</div>
 						</div>
 					</div>
@@ -293,7 +293,7 @@ if(pc_arr[1] != "1")
 									<li class="serv" >대역폭 : <strong>500Mbps </strong></li>
 									<li class="serv" >트래픽 : <strong>무제한 </strong></li>
 								</ul>
-								<button style="margin-top:23px" class="buy" onclick="window.location.href = 'https://alave.channel.io/support-bots/95185';">TM2서버 구매</button>
+								<button style="margin-top:23px" class="buy" onclick="tm2server(); return false;">TM2서버 구매</button>
 							</div>
 						</div>
 					</div>
@@ -318,7 +318,7 @@ if(pc_arr[1] != "1")
 									<li class="serv" >대역폭 : <strong>1000Mbps </strong></li>
 									<li class="serv" >트래픽 : <strong>무제한 </strong></li>
 								</ul>
-								<button style="margin-top:23px" class="buy" onclick="window.location.href = 'https://alave.channel.io/support-bots/95182';">T3서버 구매</button>
+								<button style="margin-top:23px" class="buy" onclick="t3server(); return false;">T3서버 구매</button>
 							</div>
 						</div>
 					</div>
@@ -343,7 +343,7 @@ if(pc_arr[1] != "1")
 									<li class="serv" >트래픽 : <strong>무제한 </strong></li>
 									
 								</ul>
-								<button style="margin-top:23px" class="buy" onclick="window.location.href = 'https://alave.channel.io/support-bots/95186';">TM3서버 구매</button>
+								<button style="margin-top:23px" class="buy" onclick="tm3server(); return false;">TM3서버 구매</button>
 							</div>
 						</div>
 					</div>
@@ -370,7 +370,7 @@ if(pc_arr[1] != "1")
 									<li class="serv" >트래픽 : <strong>무제한 </strong></li>
 									
 								</ul>
-								<button style="margin-top:23px" class="buy" onclick="window.location.href = 'https://alave.channel.io/support-bots/95183';">T4서버 구매</button>
+								<button style="margin-top:23px" class="buy" onclick="t4server(); return false;">T4서버 구매</button>
 							</div>
 						</div>
 					</div>
@@ -395,7 +395,7 @@ if(pc_arr[1] != "1")
 									<li class="serv" >트래픽 : <strong>무제한 </strong></li>
 									
 								</ul>
-								<button style="margin-top:23px" class="buy" onclick="window.location.href = 'https://alave.channel.io/support-bots/95187';">TM4서버 구매</button>
+								<button style="margin-top:23px" class="buy" onclick="tm4server(); return false;">TM4서버 구매</button>
 							</div>
 						</div>
 					</div>
@@ -419,7 +419,7 @@ if(pc_arr[1] != "1")
 									<li class="serv" >대역폭 : <strong>Custom </strong></li>
 									<li class="serv" >트래픽 : <strong>Custom</strong></li>
 								</ul>
-								<button style="margin-top:23px" class="buy" onclick="window.location.href = 'https://alave.channel.io/support-bots/39306';">커스텀서버 구매</button>
+								<button style="margin-top:23px" class="buy" onclick="tcustomserver(); return false;">커스텀서버 구매</button>
 							</div>
 						</div>
 					</div>
@@ -558,15 +558,6 @@ if(pc_arr[1] != "1")
 
 	<!-- Scripts -->
 	<script src="assets/scripts/jquery.min.js"></script>
-
-	<script>
-		function t1server() {
-			ChannelIO('openSupportBot', '95179'); 
-		}
-		function tm1server() {
-			ChannelIO('openSupportBot', '95184'); 
-		}
-		</script>
 
 
 	<!-- Smartlog -->
