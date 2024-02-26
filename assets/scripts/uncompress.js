@@ -36,7 +36,7 @@ function tcustomserver() {
 }
 
 function k1server() {
-    ChannelIO('openSupportBot', '95304'); 
+    ChannelIO('openSupportBot', '95315'); 
 }
 function k2server() {
     ChannelIO('openSupportBot', '95305'); 
