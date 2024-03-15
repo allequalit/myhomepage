@@ -12,12 +12,10 @@ function calculatePrice() {
     if (country === 'japan') {
         if (users <= 10) userPrice = 900 * users;
         else if (users <= 50) userPrice = 800 * users;
-        else if (users <= 100) userPrice = 700 * users;
-        else if (users <= 200) userPrice = 600 * users;
+        else if (users <= 200) userPrice = 750 * users;
     } else if (country === 'korea') {
         if (users <= 10) userPrice = 1500 * users;
         else if (users <= 50) userPrice = 1200 * users;
-        else if (users <= 100) userPrice = 1000 * users;
         else if (users <= 200) userPrice = 900 * users;
     }
 
