@@ -10,7 +10,7 @@ function calculatePrice() {
     let userPrice = 0;
 
     if (country === 'japan') {
-        if (users <= 10) userPrice = 1000 * users;
+        if (users <= 10) userPrice = 900 * users;
         else if (users <= 50) userPrice = 800 * users;
         else if (users <= 100) userPrice = 600 * users;
         else if (users <= 200) userPrice = 400 * users;
