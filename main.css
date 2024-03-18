@@ -1,0 +1,90 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        label {
+            margin-top: 10px;
+            display: block;
+            color: #666;
+        }
+
+        input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        input[type="button"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+         /* 기존 스타일은 유지하면서 추가 */
+    
+    /* 모바일 화면과 태블릿을 위한 반응형 디자인 */
+    @media only screen and (max-width: 768px) {
+        body {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        form {
+            padding: 10px;
+        }
+
+        input[type="number"], select {
+            width: auto; /* 폼 요소들이 너비를 100%에서 자동으로 조정하도록 변경 */
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="button"] {
+            padding: 10px; /* 버튼의 패딩을 조정 */
+        }
+
+        h2, h3 {
+            font-size: 16px; /* 헤더 폰트 크기를 작은 화면에 맞게 조정 */
+        }
+    }
+
+    /* 더 작은 모바일 화면을 위한 추가적인 스타일 */
+    @media only screen and (max-width: 480px) {
+        h2, h3 {
+            font-size: 14px; /* 더 작은 화면에서 헤더 폰트 크기를 더 줄임 */
+        }
+
+        /* 폼 요소들의 크기와 레이아웃을 더욱 조정 */
+        input[type="number"], select, input[type="button"] {
+            width: 100%; /* 폼 요소들이 화면 너비를 꽉 채우도록 설정 */
+        }
+    }
