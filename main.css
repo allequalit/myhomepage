@@ -85,6 +85,6 @@ body {
 
         /* 폼 요소들의 크기와 레이아웃을 더욱 조정 */
         input[type="number"], select, input[type="button"] {
-            width: 100%; /* 폼 요소들이 화면 너비를 꽉 채우도록 설정 */
+            width: 40%; /* 폼 요소들이 화면 너비를 꽉 채우도록 설정 */
         }
     }
