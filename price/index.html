@@ -1,85 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>디도스 우회방어 서비스 가격 계산기</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>프록시 서비스 가격 계산기</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    .container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-      <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+    label {
+        font-weight: bold;margin-top:8px
+    }
+    input[type="number"], select {
+        width: calc(50% - 5px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    input[type="number"]{
+        width: 93%;margin-top:8px
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    #result {
+        margin-top: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
 
-        h2 {
-            color: #007bff;
-        }
-
-        form {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        label {
-            margin-top: 10px;
-            display: block;
-            color: #666;
-        }
-
-        input[type="number"], select {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            box-sizing: border-box;
-        }
-
-        input[type="button"] {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        input[type="button"]:hover {
-            background-color: #0056b3;
-        }
-
-        h3 {
-            margin-top: 20px;
-        }
-    </style>
+          
+</style>
 </head>
 <body>
-    <h2>디도스 우회방어 서비스 가격 계산기</h2>
-    <form id="priceForm">
-        <label for="country">지역:</label>
-        <select id="country" name="country">
-            <option value="japan">일본</option>
-            <option value="korea">한국</option>
-        </select><br><br>
 
-        <label for="ports">포트 개수를 입력해주세요.</label>
-        <input type="number" id="ports" name="ports" value="0"><br><br>
+<div class="container">
+    <h2 style="margin-bottom:26px">프록시 서비스 가격 계산기</h2>
+    <div style="display: flex; justify-content: space-between;">
+        <div style="width: 48%;">
+            <label for="country">지역:</label>
+            <select id="country">
+                <option value="jp">일본</option>
+                <option value="kr">한국</option>
+            </select>
+        </div>
+    </div>
+    <label for="port">포트 개수를 입력해주세요.</label>
+    <input type="number" id="port" min="1" value="1"> <br>
+    <label for="ip">공인 IP 개수를 입력해주세요.</label>
+    <input type="number" id="ip" min="0" value="0"> <br>
+    <label for="users">사용자 수를 입력해주세요.</label>
+    <input type="number" id="users" min="0" value="0"> <br> <br>
+    <button onclick="calculatePrice()">가격 계산하기</button>
+    <div id="result"></div>
+</div>
 
-        <label for="publicIPs">공인 IP 개수를 입력해주세요.</label>
-        <input type="number" id="publicIPs" name="publicIPs" value="0"><br><br>
+<script>
+    function calculatePrice() {
+        const country = document.getElementById('country').value;
+        const port = parseInt(document.getElementById('port').value);
+        const ip = parseInt(document.getElementById('ip').value);
+        const users = parseInt(document.getElementById('users').value);
+        
+        let basePrice, portPrice, ipPrice, userPrice;
+        
+        if (country === 'jp') {
+            basePrice = 1000;
+            portPrice = 0;
+            ipPrice = 2000 * ip;
+            if (users <= 10) {
+                userPrice = users * 900;
+            } else if (users <= 50) {
+                userPrice = users * 800;
+            } else if (users >= 51) {
+                userPrice = users * 750;
+            } 
+        } else if (country === 'kr') {
+            basePrice = 100000;
+            portPrice = 3000 * port;
+            ipPrice = 50000 * ip;
+            if (users <= 10) {
+                userPrice = users * 1500;
+            } else if (users <= 50) {
+                userPrice = users * 1200;
+            } else if (users >= 51) {
+                userPrice = users * 900;
+            } 
+        }
+        
+        const totalPrice = basePrice + portPrice + ipPrice + userPrice;
+        document.getElementById('result').innerText = `총 가격: ${totalPrice.toLocaleString()} 원`;
+    }
+</script>
 
-        <label for="users">접속자 수를 입력해주세요:</label>
-        <input type="number" id="users" name="users" value="0"><br><br>
-
-        <input type="button" value="계산하기" onclick="calculatePrice()">
-    </form>
-
-    <h3>총 비용: <span id="totalPrice">0</span> 원</h3>
-
-    <script src="calculatePrice.js"></script>
 </body>
 </html>
